@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './nav';
+// import Clicked from './pics'
+import Clicked from './pics'
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Score from './score'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Jumbotron fluid>
+        <div class="container">
+          <h1>Clicky Game!</h1>
+          <p>
+            Click on an image to earn points, but dont click on the same image twice!
+          </p>
+        </div>
+      </Jumbotron>
+      <Score />
     </div>
   );
 }
